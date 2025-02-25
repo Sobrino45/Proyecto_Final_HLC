@@ -1,0 +1,9 @@
+target/
+*.jar
+*.war
+*.log
+node_modules/
+.DS_Store
+.idea/
+*.iml
+.vscode/

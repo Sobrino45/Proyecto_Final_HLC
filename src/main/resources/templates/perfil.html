@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <h2>Mi Perfil</h2>
+    <p>Bienvenido, <span th:text="${usuario.nombre}"></span></p>
+    <h3>Mis Reservas</h3>
+    <ul>
+        <li th:each="reserva : ${reservas}">
+            <span th:text="${reserva.evento.nombre}"></span> - 
+            <span th:text="${reserva.evento.fecha}"></span>
+        </li>
+    </ul>
+    <a href="/logout">Cerrar sesión</a>
+</body>
+</html>

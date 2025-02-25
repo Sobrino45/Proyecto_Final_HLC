@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Eventos</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <h2>Eventos Disponibles</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Fecha</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="evento : ${eventos}">
+                <td th:text="${evento.nombre}"></td>
+                <td th:text="${evento.descripcion}"></td>
+                <td th:text="${evento.fecha}"></td>
+                <td>
+                    <form th:action="@{/reservas/crear}" method="post">
+                        <input type="hidden" name="eventoId" th:value="${evento.id}">
+                        <button type="submit">Reservar</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
