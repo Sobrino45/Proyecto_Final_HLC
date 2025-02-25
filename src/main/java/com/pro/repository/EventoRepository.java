@@ -1,3 +1,5 @@
+package com.pro.repository;
+
 import com.pro.model.Evento;
 
 import java.util.List;
