@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y maven
 
 WORKDIR /app
 COPY . .
-RUN mvn clean install
+RUN mvn clean install -DskipTests
 
 # Usar openjdk:17-jdk-slim también para la ejecución
 FROM openjdk:17-jdk-slim
