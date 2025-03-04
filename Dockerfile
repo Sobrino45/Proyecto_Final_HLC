@@ -1,8 +1,8 @@
-FROM eclipse-temurin:17-jdk
+FROM eclipse-temurin:21-jdk
 
 WORKDIR /app
 
-COPY target/Proyecto_Final_HLC-0.0.1-SNAPSHOT.jar app.jar
+COPY target/Proyecto_Final-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
