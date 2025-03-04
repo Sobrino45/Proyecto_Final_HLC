@@ -1,5 +1,9 @@
 # Usar openjdk:17-jdk-slim para la compilación
 FROM openjdk:17-jdk-slim AS builder
+
+# Instalar Maven
+RUN apt-get update && apt-get install -y maven
+
 WORKDIR /app
 COPY . .
 RUN mvn clean install
